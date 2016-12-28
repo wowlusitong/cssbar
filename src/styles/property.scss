@@ -1,0 +1,70 @@
+.property-wrap {
+  font-size: 16px;
+  padding: 50px;
+  border-bottom: 2px solid $oc-blue-5;
+
+  h2 {
+    position: relative;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+
+        &::before {
+          content: '#';
+          position: absolute;
+          left: -20px;
+        }
+      }
+    }
+  }
+
+  .example {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid $oc-gray-1;
+    padding: 20px 0px;
+
+    & > div {
+      min-width: 400px;
+      min-height: 100px;
+    }
+    .description {
+      flex: 6;
+
+      p:first-child {
+        display: flex;
+        justify-content: space-between;
+
+        span:first-child {
+          padding: 5px 10px;
+          background: $oc-blue-5;
+          color: #fff;
+          border-radius: 2px;
+          font-size: 14px;
+          cursor: pointer;
+        }
+        span:nth-child(2) {
+          width: 60px;
+          border: 1px solid $oc-blue-5;
+          color: $oc-blue-5;
+          text-align: center;
+          padding: 5px 0px;
+          font-size: 14px;
+          border-radius: 2px;
+        }
+      }
+    }
+    .preview {
+      flex: 4;
+      border: 1px solid $oc-gray-2;
+      border-radius: 2px;
+      margin: 0px 10px;
+      padding: 3px;
+      overflow: auto;
+    }
+  }
+
+}

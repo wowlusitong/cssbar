@@ -1,0 +1,43 @@
+#z-index .preview {
+  & > div {
+    position: relative;
+
+    div {
+      position: absolute;
+      opacity: 0.9;
+
+      &.div-a {
+        left: 0px;
+        width: 100%;
+        background: $oc-blue-4;
+        height: 50px;
+      }
+      &.div-b {
+        left: 50px;
+        background: $oc-red-4;
+        width: 200px;
+        height: 80px;
+      }
+      &.div-c {
+        left: 100px;
+        background: $oc-green-4;
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+  &.a {
+    .div-a {
+      z-index: 1;
+    }
+  }
+  &.b {
+    .div-a {
+      z-index: 1;
+    }
+    .div-b {
+      z-index: 2;
+    }
+  }
+
+}

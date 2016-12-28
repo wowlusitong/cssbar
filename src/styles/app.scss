@@ -1,0 +1,31 @@
+.body-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100vw;
+  height: 100vh;
+
+  .sidebar-wrap {
+    width: 240px;
+    min-width: 240px;
+    height: 100vh;
+    border-right: 1px solid $oc-gray-3;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  main {
+    flex: 1;
+    overflow: auto;
+  }
+  .footer {
+    margin-top: 30px;
+    text-align: center;
+
+    a {
+      color: #000;
+      &:hover {
+        color: $oc-blue-5;
+        text-decoration: underline;
+      }
+    }
+  }
+}

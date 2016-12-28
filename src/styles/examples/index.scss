@@ -1,0 +1,25 @@
+.preview {
+  & > div {
+    @for $i from 1 through 8 {
+      & > span:nth-child(#{$i}) {
+        background: nth($colors, $i);
+      }
+    }
+  }
+  .text {
+    margin-bottom: 5px;
+    background: $oc-blue-2;
+    border-bottom: 2px solid $oc-red-5;
+    padding: 3px 0px;
+  }
+}
+
+
+@import "./b.scss";
+@import "./t.scss";
+@import "./l.scss";
+@import "./r.scss";
+@import "./w.scss";
+@import "./z.scss";
+@import "./m.scss";
+@import "./example.scss";

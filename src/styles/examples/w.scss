@@ -1,0 +1,42 @@
+#word-break .preview {
+  .text {
+    width: 300px;
+  }
+  &.normal .text {
+    word-break: normal;
+  }
+  &.break-all .text {
+    word-break: break-all;
+  }
+  &.keep-all .text {
+    word-break: keep-all;
+  }
+}
+
+#word-spacing .preview {
+  .px {
+    word-spacing: 10px;
+  }
+}
+
+#white-space .preview {
+  & > div {
+    width: 300px;
+    background: $oc-blue-2;
+  }
+  &.pre {
+    white-space: pre;
+  }
+  &.pre {
+    white-space: pre;
+  }
+  &.nowrap {
+    white-space: nowrap;
+  }
+  &.pre-wrap {
+    white-space: pre-wrap;
+  }
+  &.pre-line {
+    white-space: pre-line;
+  }
+}

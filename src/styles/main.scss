@@ -1,0 +1,34 @@
+@import "~open-color";
+
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome.scss";
+
+@import "./variables.scss";
+
+@import "./app.scss";
+@import "./sidebar.scss";
+@import "./card.scss";
+@import "./property-nav.scss";
+@import "./property.scss";
+@import "./examples/index.scss";
+
+
+body {
+  margin: 0px;
+  font-size: 14px;
+  font-family: "Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.highlight {
+  background: $oc-orange-7;
+  color: #fff;
+}
+i.active {
+  color: $oc-blue-5 !important;
+}
+.flex {
+  display: flex;
+}

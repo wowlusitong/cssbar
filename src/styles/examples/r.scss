@@ -1,0 +1,54 @@
+#right .preview {
+
+  & > div {
+    margin: 30px;
+    border: 1px solid $oc-blue-5;
+    position: relative;
+    height: 100px;
+    font-size: 14px;
+
+    & > span {
+      width: 100px;
+      padding: 10px 0px;
+      display: block;
+      text-align: center;
+    }
+  }
+  .absolute {
+    position: absolute;
+    background: $oc-red-4;
+    bottom: 10px;
+  }
+  .relative {
+    position: relative;
+    background: $oc-yellow-4;
+    top: 10px;
+  }
+  .natural-absolute {
+    position: absolute;
+    background: $oc-red-4;
+    opacity: 0.2;
+    bottom: 10px;
+  }
+  .natural-relative {
+    position: absolute;
+    background: $oc-yellow-4;
+    opacity: 0.2;
+    top: 10px;
+  }
+  &.px-20 {
+    .relative, .absolute {
+      right: 20px;
+    }
+  }
+  &.px-0 {
+    .relative, .absolute {
+      right: 0px;
+    }
+  }
+  &.per-5 {
+    .relative, .absolute {
+      right: 5%;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.property-nav-wrap {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  flex: 1;
+  overflow: auto;
+
+  li {
+
+    a {
+      padding: 10px 18px;
+      display: block;
+      text-decoration: none;
+      color: $link-color;
+
+      &:hover {
+        background: $oc-blue-6;
+        color: #fff;
+      }
+      &:active {
+        background: $oc-blue-9;
+      }
+    }
+  }
+}

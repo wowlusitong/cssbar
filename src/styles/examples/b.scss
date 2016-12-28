@@ -1,0 +1,389 @@
+#border-top-color, #border-bottom-color, #border-left-color, #border-right-color  {
+  .preview {
+    &.red > div {
+      border-color: red;
+    }
+  }
+}
+#border-color .preview {
+  &.red > div {
+    border-color: red;
+  }
+  &.red-blue > div {
+    border-color: red blue;
+  }
+  &.red-blue-green > div {
+    border-color: red blue green;
+  }
+  &.red-blue-green-yellow > div {
+    border-color: red blue green yellow;
+  }
+}
+#border-top-width  {
+  .preview {
+    & > div {
+      border-top-style: solid;
+    }
+    &.px-1 > div {
+      border-top-width: 1px;
+    }
+    &.px-10 > div {
+      border-top-width: 10px;
+    }
+    &.thin > div {
+      border-top-width: thin;
+    }
+    &.thick > div {
+      border-top-width: thick;
+    }
+  }
+}
+#border-bottom-width, {
+  .preview {
+    & > div {
+      border-bottom-style: solid;
+    }
+    &.px-1 > div {
+      border-bottom-width: 1px;
+    }
+    &.px-10 > div {
+      border-bottom-width: 10px;
+    }
+    &.thin > div {
+      border-bottom-width: thin;
+    }
+    &.thick > div {
+      border-bottom-width: thick;
+    }
+  }
+}
+#border-left-width {
+  .preview {
+    & > div {
+      border-left-style: solid;
+    }
+    &.px-1 > div {
+      border-left-width: 1px;
+    }
+    &.px-10 > div {
+      border-left-width: 10px;
+    }
+    &.thin > div {
+      border-left-width: thin;
+    }
+    &.thick > div {
+      border-left-width: thick;
+    }
+  }
+}
+#border-right-width  {
+  .preview {
+    & > div {
+      border-right-style: solid;
+    }
+    &.px-1 > div {
+      border-right-width: 1px;
+    }
+    &.px-10 > div {
+      border-right-width: 10px;
+    }
+    &.thin > div {
+      border-right-width: thin;
+    }
+    &.thick > div {
+      border-right-width: thick;
+    }
+  }
+}
+#border-width  {
+  .preview {
+    & > div {
+      border-style: solid;
+    }
+    &.px-1 > div {
+      border-width: 1px;
+    }
+    &.px-10 > div {
+      border-width: 10px;
+    }
+    &.thin > div {
+      border-width: thin;
+    }
+    &.thick > div {
+      border-width: thick;
+    }
+    &.px-1-5 > div {
+      border-width: 1px 5px;
+    },
+    &.px-1-5-10 > div {
+      border-width: 1px 5px 10px;
+    },
+    &.px-1-5-10-15 > div {
+      border-width: 1px 5px 10px 15px;
+    }
+  }
+}
+
+#border-style .preview > div {
+  border-width: 5px;
+}
+#border-top-style .preview > div {
+  border-width: 0px;
+  border-top-width: 5px;
+}
+#border-right-style .preview > div {
+  border-width: 0px;
+  border-right-width: 5px;
+}
+#border-bottom-style .preview > div {
+  border-width: 0px;
+  border-bottom-width: 5px;
+}
+#border-left-style .preview > div {
+  border-width: 0px;
+  border-left-width: 5px;
+}
+
+#border-style, #border-top-style, #border-right-style, #border-bottom-style, #border-left-style {
+  .preview {
+    &.none > div {
+      border-style: none;
+    }
+    &.solid > div {
+      border-style: solid;
+    }
+    &.dotted > div {
+      border-style: dotted;
+    }
+    &.dashed > div {
+      border-style: dashed;
+    }
+    &.double > div {
+      border-style: double;
+    }
+    &.groove > div {
+      border-style: groove;
+    }
+    &.ridge > div {
+      border-style: ridge;
+    }
+    &.inset > div {
+      border-style: inset;
+    }
+    &.outset > div {
+      border-style: outset;
+    }
+    &.hidden > div {
+      border-style: hidden;
+    }
+    &.solid-dotted > div {
+      border-style: solid dotted;
+    }
+    &.solid-dotted-double > div {
+      border-style: solid dotted double;
+    }
+    &.solid-dotted-double-inset > div {
+      border-style: solid dotted double inset;
+    }
+  }
+}
+
+#border-top .preview {
+  &.px2 > div {
+    border-top: 2px;
+  }
+  &.px2-solid > div {
+    border-top: 2px solid;
+  }
+  &.px2-solid-red > div {
+    border-top: 2px solid red;
+  }
+}
+#border-right .preview {
+  &.px2 > div {
+    border-right: 2px;
+  }
+  &.px2-solid > div {
+    border-right: 2px solid;
+  }
+  &.px2-solid-red > div {
+    border-right: 2px solid red;
+  }
+}
+#border-bottom .preview {
+  &.px2 > div {
+    border-bottom: 2px;
+  }
+  &.px2-solid > div {
+    border-bottom: 2px solid;
+  }
+  &.px2-solid-red > div {
+    border-bottom: 2px solid red;
+  }
+}
+#border-left .preview {
+  &.px2 > div {
+    border-left: 2px;
+  }
+  &.px2-solid > div {
+    border-left: 2px solid;
+  }
+  &.px2-solid-red > div {
+    border-left: 2px solid red;
+  }
+}
+#border .preview {
+  &.px2 > div {
+    border: 2px;
+  }
+  &.px2-solid > div {
+    border: 2px solid;
+  }
+  &.px2-solid-red > div {
+    border: 2px solid red;
+  }
+}
+#bottom .preview {
+
+  & > div {
+    margin: 30px;
+    border: 1px solid $oc-blue-5;
+    position: relative;
+    height: 100px;
+    font-size: 14px;
+
+    & > span {
+      width: 100px;
+      padding: 10px 0px;
+      display: inline-block;
+      text-align: center;
+    }
+  }
+  .absolute {
+    position: absolute;
+    left: 150px;
+    background: $oc-red-4;
+  }
+  .relative {
+    position: relative;
+    background: $oc-yellow-4;
+    left: 10px;
+  }
+  .natural-absolute {
+    position: absolute;
+    left: 150px;
+    background: $oc-red-4;
+    opacity: 0.2;
+  }
+  .natural-relative {
+    position: absolute;
+    background: $oc-yellow-4;
+    left: 10px;
+    opacity: 0.2;
+  }
+  &.px-20 {
+    .relative, .absolute {
+      bottom: 20px;
+    }
+  }
+  &.px-0 {
+    .relative, .absolute {
+      bottom: 0px;
+    }
+  }
+  &.per-20 {
+    .relative, .absolute {
+      bottom: 20%;
+    }
+  }
+}
+
+#border-radius .preview {
+  & > div {
+    border: 3px solid $oc-red-5;
+    padding: 10px;
+  }
+  &.px-0 > div {
+    border-radius: 0px;
+  }
+  &.px-10 > div {
+    border-radius: 10px;
+  }
+  &.per-10 > div {
+    border-radius: 10%;
+  }
+  &.per-50 > div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    line-height: 100px;
+    text-align: center;
+  }
+  &.px-10-20 > div {
+    border-radius: 10px 20px;
+  }
+}
+
+#border-top-left-radius .preview {
+  & > div {
+    border: 3px solid $oc-red-5;
+    padding: 10px;
+  }
+  &.px-0 > div {
+    border-top-left-radius: 0px;
+  }
+  &.px-10 > div {
+    border-top-left-radius: 10px;
+  }
+  &.per-10 > div {
+    border-top-left-radius: 10%;
+  }
+}
+
+#border-top-right-radius .preview {
+  & > div {
+    border: 3px solid $oc-red-5;
+    padding: 10px;
+  }
+  &.px-0 > div {
+    border-top-right-radius: 0px;
+  }
+  &.px-10 > div {
+    border-top-right-radius: 10px;
+  }
+  &.per-10 > div {
+    border-top-right-radius: 10%;
+  }
+}
+
+#border-bottom-left-radius .preview {
+  & > div {
+    border: 3px solid $oc-red-5;
+    padding: 10px;
+  }
+  &.px-0 > div {
+    border-bottom-left-radius: 0px;
+  }
+  &.px-10 > div {
+    border-bottom-left-radius: 10px;
+  }
+  &.per-10 > div {
+    border-bottom-left-radius: 10%;
+  }
+}
+
+#border-bottom-right-radius .preview {
+  & > div {
+    border: 3px solid $oc-red-5;
+    padding: 10px;
+  }
+  &.px-0 > div {
+    border-bottom-right-radius: 0px;
+  }
+  &.px-10 > div {
+    border-bottom-right-radius: 10px;
+  }
+  &.per-10 > div {
+    border-bottom-right-radius: 10%;
+  }
+}
