@@ -1,0 +1,19 @@
+#opacity .preview {
+  & > div {
+    background: $oc-teal-4;
+    height: 40px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &.a div{
+    opacity: 0;
+  }
+  &.b div{
+    opacity: 0.3;
+  }
+  &.c div{
+    opacity: 0.7;
+  }
+}

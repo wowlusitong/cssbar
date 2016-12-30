@@ -1,0 +1,115 @@
+#padding-top .preview {
+  &.a {
+    .div-b {
+      padding-top: 20px;
+      &::after {
+        content: 'padding-top: 20px'
+      }
+    }
+  }
+}
+#padding-bottom .preview {
+  &.a {
+    .div-b {
+      padding-bottom: 20px;
+      &::after {
+        content: 'padding-bottom: 20px'
+      }
+    }
+  }
+}
+
+#padding-left .preview {
+  & > div {
+    position: relative;
+  }
+  &.default {
+    .range {
+      display: none;
+    }
+  }
+  &.a {
+    .div-b {
+      padding-left: 20px;
+      width: auto;
+      &::after {
+        content: 'padding-left: 20px'
+      }
+    }
+    .range {
+      position: absolute;
+      top: 40px;
+      left: 0px;
+      width: 20px;
+      height: 38px;
+      border: 1px solid black;
+    }
+  }
+}
+
+#padding-right .preview {
+  & > div {
+    position: relative;
+  }
+  &.default {
+    .range {
+      display: none;
+    }
+  }
+  &.a {
+    .div-b {
+      padding-right: 20px;
+      width: auto;
+      &::after {
+        content: 'padding-right: 20px'
+      }
+    }
+  }
+  .range {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 20px;
+    height: 38px;
+    border: 1px solid black;
+  }
+}
+
+#padding .preview {
+  &.a {
+    .div-b {
+      padding: 10px;
+      width: calc(100% - 20px);
+      &::after {
+        content: 'padding: 10px'
+      }
+    }
+  }
+  &.b {
+    .div-b {
+      padding: 10px 20px;
+      width: calc(100% - 40px);
+      &::after {
+        content: 'padding-right: 10px 20px'
+      }
+    }
+  }
+  &.c {
+    .div-b {
+      padding: 10px 20px 30px;
+      width: calc(100% - 40px);
+      &::after {
+        content: 'padding-right: 10px 20px 30px'
+      }
+    }
+  }
+  &.d {
+    .div-b {
+      padding: 10px 20px 30px 40px;
+      width: calc(100% - 60px);
+      &::after {
+        content: 'padding-right: 10px 20px 30px 40px'
+      }
+    }
+  }
+}

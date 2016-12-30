@@ -32,7 +32,23 @@ export default {
 
   },
   'line-height': {
-
+    description: '设置文本的行高',
+    values: [
+      {
+        name: 'normal',
+        description: '取决于用户代理。桌面浏览器（包括火狐浏览器）使用默认值，约为1.2，这取决于元素的 font-family'
+      },
+      {
+        name: '1.5',
+        id: 'a',
+        description: '如果值为没有单位的数字，行高则是该数字乘以当前的字体大小'
+      },
+      {
+        name: '20px',
+        id: 'b',
+        description: '使用长度设置行高，比如px，em，rem和百分比'
+      }
+    ]
   },
   'list-style-image': {
 

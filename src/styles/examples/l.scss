@@ -52,3 +52,12 @@
     }
   }
 }
+
+#line-height .preview{
+  &.a {
+    line-height: 1.5;
+  }
+  &.b {
+    line-height: 30px;
+  }
+}

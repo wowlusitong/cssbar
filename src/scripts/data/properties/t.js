@@ -66,7 +66,7 @@ export default {
       {
         name: '20px',
         id: 'a',
-        description: '使用数值，可以使用px, rem, em, 百分比'
+        description: '使用长度，可以使用px, rem, em, 百分比'
       },
       {
         name: '-20px',
