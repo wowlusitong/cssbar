@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from 'react-router';
+import {withRouter} from 'react-router';
 
 import data from '~/data/properties';
 
-export default class PropertyNav extends React.Component {
+class PropertyNav extends React.Component {
   constructor(props) {
     super(props);
     this.names = Object.keys(data);
@@ -14,8 +14,13 @@ export default class PropertyNav extends React.Component {
 
   handleClick(name: string, event) {
     event.preventDefault();
-
-    location.hash = name;
+    const isDetailPage = this.props.params.name;
+    if (isDetailPage) {
+      //FIXME use react-router
+      location.href = `/#${name}`;
+    } else {
+      location.hash = name;
+    }
   }
 
   componentWillReceiveProps({value}) {
@@ -45,3 +50,5 @@ export default class PropertyNav extends React.Component {
     );
   }
 }
+
+export default withRouter(PropertyNav);

@@ -183,11 +183,107 @@ export default {
       }
     ]
   },
-  'transform-origin': {
-
-  },
+  // 'transform-origin': {
+  //   description: '更改元素变形的原点',
+  //   values: [
+  //     {
+  //       name: '50% 50% 0',
+  //       id: 'default',
+  //       description: ''
+  //     },
+  //     {
+  //       name: '20px 20px',
+  //       id: 'a'
+  //     },
+  //     {
+  //       name: 'top right'
+  //     },
+  //     {
+  //       name: 'center bottom'
+  //     },
+  //     {
+  //       name: '20px 20px 50px'
+  //     }
+  //   ]
+  // },
   'transform': {
-
+    description: '定义元素如何坐标空间，比如移动（translate）、旋转（rotate）、缩放（scale）、倾斜（skew）',
+    values: [
+      {
+        name: 'none',
+        description: '没有任何效果'
+      },
+      {
+        name: 'translateX(20px)',
+        id: 'translateX',
+        description: '在水平坐标上移动元素，也就是元素横向移动'
+      },
+      {
+        name: 'translateY(20px)',
+        id: 'translateY',
+        description: '在垂直坐标上移动元素，也就是元素纵向移动'
+      },
+      {
+        name: 'translate(20px, 20px)',
+        id: 'translate',
+        description: `可以设置两个值
+        <ul>
+          <li>第一个值：在水平坐标上移动元素 translateX</li>
+          <li>第二个值：在垂直坐标上移动元素 translateY</li>
+        </ul>
+        `
+      },
+      {
+        name: 'scaleX(0.8)',
+        id: 'scaleX',
+        description: '在水平坐标上缩放元素'
+      },
+      {
+        name: 'scaleY(1.3)',
+        id: 'scaleY',
+        description: '在垂直坐标上缩放元素'
+      },
+      {
+        name: 'scale(1.3, 0.5)',
+        id: 'scale',
+        description: `可以设置两个值
+        <ul>
+          <li>第一个值：在水平坐标上移动元素 translateX</li>
+          <li>第二个值：在垂直坐标上移动元素 translateY</li>
+        </ul>
+        `
+      },
+      {
+        name: 'rotate(45deg)',
+        id: 'rotate',
+        description: '旋转元素'
+      },
+      {
+        name: 'skewX(15deg)',
+        id: 'skewX',
+        description: '在水平坐标上倾斜元素'
+      },
+      {
+        name: 'skewY(15deg)',
+        id: 'skewY',
+        description: '在垂直坐标上倾斜元素'
+      },
+      {
+        name: 'skew(15deg, 25deg)',
+        id: 'skew',
+        description: `可以设置两个值
+        <ul>
+          <li>第一个值：在水平坐标上倾斜元素 translateX</li>
+          <li>第二个值：在垂直坐标上倾斜元素 translateY</li>
+        </ul>
+        `
+      },
+      {
+        name: 'translate(30px, 30px) rotate(45deg)',
+        id: 'a',
+        description: '可以设置多个值进行组合'
+      }
+    ]
   },
   'transition-delay': {
 
@@ -202,6 +298,5 @@ export default {
 
   },
   'transition': {
-
   }
 };

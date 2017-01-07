@@ -166,3 +166,36 @@
     }
   }
 }
+
+#max-height .preview {
+  & > div {
+    width: 300px;
+  }
+  &.a > div {
+    max-height: 50px;
+  }
+}
+
+#min-height .preview {
+  & > div {
+    width: 400px;
+  }
+  &.a > div {
+    min-height: 150px;
+  }
+}
+
+#min-width .preview {
+  & > div {
+    display: inline-block;
+  }
+  &.a > div {
+    min-width: 300px;
+  }
+}
+
+#max-width .preview {
+  &.a > div {
+    max-width: 300px;
+  }
+}

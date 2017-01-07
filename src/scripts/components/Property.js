@@ -1,12 +1,11 @@
 /* @flow */
 
 import React from 'react';
-import {Link} from 'react-router';
 
 import allExamples from '~/components/examples';
 import {toCamelcase} from '~/utils/format';
 
-export default class Property extends React.Component {
+export default class Property extends React.PureComponent {
 
   renderDefault() {
     return (
@@ -14,12 +13,6 @@ export default class Property extends React.Component {
     );
   }
 
-  handleClick(name: string, event) {
-    event.preventDefault();
-
-    location.hash = name;
-  }
-  
   render() {
     const {property, name} = this.props;
 
@@ -27,9 +20,10 @@ export default class Property extends React.Component {
       <section className="property-wrap" id={name}>
         <h2>
           <strong>
-            <a href="#" onClick={this.handleClick.bind(this, name)}>{name}</a>
+            <a href={`/css/${name}`} target="_blank">{name}</a>
           </strong>
         </h2>
+        {!!property.values || 'Coming Soon'}
         <p dangerouslySetInnerHTML={{__html: property.description}} />
         {(property.values || []).map((value, i) => {
           const propertyExample = allExamples[toCamelcase(name)];

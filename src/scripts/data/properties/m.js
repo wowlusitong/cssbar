@@ -138,18 +138,62 @@ export default {
     ]
   },
   'max-height': {
-
+    description: '设置元素的最大高度',
+    values: [
+      {
+        name: '0',
+        description: '没有最小宽度'
+      },
+      {
+        name: '50px',
+        id: 'a',
+        description: '当设置最大高度后，元素的高度可以比指定值小，但是不能比它更高'
+      }
+    ]
   },
   'max-width': {
-
+    description: '设置元素的最大宽度',
+    values: [
+      {
+        name: '0',
+        description: '没有最大宽度'
+      },
+      {
+        name: '300px',
+        id: 'a',
+        description: '当设置最大宽度后，元素的宽度可以比指定值小，但是不能比它更宽'
+      }
+    ]
   },
   'min-height': {
-
+    description: '设置元素的最小高度',
+    values: [
+      {
+        name: '0',
+        description: '没有最小高度'
+      },
+      {
+        name: '150px',
+        id: 'a',
+        description: '当设置最小高度后，元素的高度可以比指定值高，但是不能比它小'
+      }
+    ]
   },
   'min-width': {
-
+    description: '设置元素的最小宽度',
+    values: [
+      {
+        name: '0',
+        description: '没有最小宽度'
+      },
+      {
+        name: '300px',
+        id: 'a',
+        description: '当设置最小宽度后，元素的宽度可以比指定值宽，但是不能比它小'
+      }
+    ]
   },
-  'mix-blend-mode': {
-
-  }
+  // 'mix-blend-mode': {
+  //
+  // }
 };

@@ -32,3 +32,9 @@ i.active {
 .flex {
   display: flex;
 }
+.not-found {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: $oc-red-3;
+}

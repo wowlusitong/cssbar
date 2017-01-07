@@ -13,9 +13,11 @@
         text-decoration: underline;
 
         &::before {
-          content: '#';
+          font: normal normal normal 14px/1 FontAwesome;
+          content: '\F0C1';
           position: absolute;
           left: -20px;
+          top: 10px;
         }
       }
     }
@@ -63,7 +65,7 @@
       border-radius: 2px;
       margin: 0px 10px;
       padding: 3px;
-      overflow: auto;
+      //overflow: hidden;
     }
   }
 

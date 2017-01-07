@@ -47,7 +47,7 @@ export default {
       },
       {
         name: 'center',
-        description: '元素居中对其。'
+        description: '元素居中对齐。'
       },
       {
         name: 'baseline',
@@ -56,7 +56,33 @@ export default {
     ]
   },
   'align-self': {
-
+    description: '类似于align-items，但是该属性只对一个flexbox元素生效，而不是所有的',
+    values: [
+      {
+        name: 'auto',
+        description: '使用父级元素的align-items值'
+      },
+      {
+        name: 'flex-start',
+        description: '元素向起点对齐。'
+      },
+      {
+        name: 'flex-end',
+        description: '元素向终点对齐。'
+      },
+      {
+        name: 'center',
+        description: '元素居中对齐。'
+      },
+      {
+        name: 'baseline',
+        description: '元素向基线对齐。'
+      },
+      {
+        name: 'stretch',
+        description: '元素被被拉伸到与容器相同的高度或宽度。'
+      }
+    ]
   },
   'animation-delay': {
 
@@ -85,7 +111,7 @@ export default {
   'animation': {
 
   },
-  'appearance': {
-
-  }
+  // 'appearance': {
+  //
+  // }
 };

@@ -17,3 +17,65 @@
     opacity: 0.7;
   }
 }
+
+#overflow .preview {
+  & > div {
+    width: 260px;
+    height: 80px;
+
+    & > div {
+      width: 300px;
+      height: 200px;
+    }
+  }
+  &.hidden > div {
+    overflow: hidden;
+  }
+  &.scroll > div {
+    overflow: scroll;
+  }
+  &.auto > div {
+    overflow: auto;
+  }
+}
+#overflow-x .preview {
+  & > div {
+    width: 260px;
+    height: 80px;
+    word-break: keep-all;
+    white-space: nowrap;
+
+    & > div {
+      width: 300px;
+      height: 50px;
+    }
+  }
+  &.hidden > div {
+    overflow-x: hidden;
+  }
+  &.scroll > div {
+    overflow-x: scroll;
+  }
+  &.auto > div {
+    overflow-x: auto;
+  }
+}
+#overflow-y .preview {
+  & > div {
+    width: 200px;
+    height: 50px;
+    & > div {
+      width: 180px;
+      overflow-x: hidden;
+    }
+  }
+  &.hidden > div {
+    overflow-y: hidden;
+  }
+  &.scroll > div {
+    overflow-y: scroll;
+  }
+  &.auto > div {
+    overflow-y: auto;
+  }
+}

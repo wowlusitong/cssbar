@@ -10,7 +10,7 @@ export default class App extends React.Component {
       <div className="body-wrap">
         <Sidebar />
         <main>
-          <AllProperties />
+          {this.props.children || <AllProperties />}
         </main>
       </div>
     );

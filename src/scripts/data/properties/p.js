@@ -104,9 +104,9 @@ export default {
       }
     ]
   },
-  'pointer-events': {
-
-  },
+  // 'pointer-events': {
+  //
+  // },
   'position': {
 
   }

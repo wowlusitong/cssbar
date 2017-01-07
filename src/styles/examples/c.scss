@@ -1,0 +1,120 @@
+#content .preview {
+  &.a div::after {
+    content: 'cssbar';
+  }
+  &.b div::after {
+    content: url('../images/bg.jpg');
+  }
+  &.c div::after {
+    content: attr(name);
+  }
+}
+#cursor .preview {
+  & > div {
+    background: $oc-teal-3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &.default > div {
+    cursor: default;
+  }
+  &.none > div {
+    cursor: none;
+  }
+  &.context-menu > div {
+    cursor: context-menu;
+  }
+  &.help > div {
+    cursor: help;
+  }
+  &.pointer > div {
+    cursor: pointer;
+  }
+  &.progress > div {
+    cursor: progress;
+  }
+  &.wait > div {
+    cursor: wait;
+  }
+  &.cell > div {
+    cursor: cell;
+  }
+  &.crosshair > div {
+    cursor: crosshair;
+  }
+  &.text > div {
+    cursor: text;
+  }
+  &.vertical-text > div {
+    cursor: vertical-text;
+  }
+  &.alias > div {
+    cursor: alias;
+  }
+  &.copy > div {
+    cursor: copy;
+  }
+  &.move > div {
+    cursor: move;
+  }
+  &.no-drop > div {
+    cursor: no-drop;
+  }
+  &.not-allowed > div {
+    cursor: not-allowed;
+  }
+  &.all-scroll > div {
+    cursor: all-scroll;
+  }
+  &.col-resize > div {
+    cursor: col-resize;
+  }
+  &.row-resize > div {
+    cursor: row-resize;
+  }
+  &.n-resize > div {
+    cursor: n-resize;
+  }
+  &.e-resize > div {
+    cursor: e-resize;
+  }
+  &.s-resize > div {
+    cursor: s-resize;
+  }
+  &.w-resize > div {
+    cursor: w-resize;
+  }
+  &.ne-resize > div {
+    cursor: ne-resize;
+  }
+  &.nw-resize > div {
+    cursor: nw-resize;
+  }
+  &.se-resize > div {
+    cursor: se-resize;
+  }
+  &.sw-resize > div {
+    cursor: sw-resize;
+  }
+  &.ew-resize > div {
+    cursor: ew-resize;
+  }
+  &.ns-resize > div {
+    cursor: ns-resize;
+  }
+  &.nesw-resize > div {
+    cursor: nesw-resize;
+  }
+  &.nwse-resize > div {
+    cursor: nwse-resize;
+  }
+  &.zoom-in > div {
+    cursor: zoom-in;
+  }
+  &.zoom-out > div {
+    cursor: zoom-out;
+  }
+}

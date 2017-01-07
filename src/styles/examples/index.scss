@@ -8,14 +8,15 @@
   }
   .text {
     margin-bottom: 5px;
-    background: $oc-blue-2;
-    border-bottom: 2px solid $oc-red-5;
-    padding: 3px 0px;
+    background: $oc-teal-4;
+    border-radius: 3px;
+    padding: 3px;
   }
 }
 
-
+@import "./a.scss";
 @import "./b.scss";
+@import "./c.scss";
 @import "./t.scss";
 @import "./l.scss";
 @import "./r.scss";

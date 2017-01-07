@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import PropertyNav from '~/components/PropertyNav';
+import Logo from '@images/logo.png';
 
 export default class Sidebar extends React.Component {
   constructor() {
@@ -43,8 +44,8 @@ export default class Sidebar extends React.Component {
     return (
       <nav className="sidebar-wrap">
         <header>
-          <div style={{flex: 1}}>
-
+          <div className="logo-wrap">
+            <a href="/"><img src={Logo} width="200px" title="cssbar.com" /></a>
           </div>
           <div className="search-wrap">
             <i className={`fa fa-search ${classNames({active: isActive})}`} />

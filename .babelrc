@@ -1,13 +1,15 @@
 {
   "presets": [
     "react",
-    "es2015"
+    "es2015",
+    "stage-0"
   ],
   "plugins": [
     "transform-class-properties",
     ["module-resolver", {
       "alias": {
-        "~": "./src/scripts"
+        "~": "./src/scripts",
+        "@images": "./src/images"
       }
     }]
   ]

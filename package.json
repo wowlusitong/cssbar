@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -p",
-    "start": "node server"
+    "start": "node dev-server",
+    "dev:server": "node server/server",
+    "build": "NODE_ENV=producet webpack -p",
+    "build:server": "isServer=true webpack -p --config webpack.server.config.js && cp -f server/* dist/server",
+    "build:all": "npm run build && npm run build:server"
   },
   "keywords": [],
   "author": "",
@@ -14,24 +17,29 @@
   "devDependencies": {
     "autoprefixer": "^6.5.3",
     "babel-cli": "^6.14.0",
+    "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.5",
     "babel-plugin-module-resolver": "^2.4.0",
     "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-polyfill": "^6.20.0",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.16.0",
     "classnames": "^2.2.5",
     "css-loader": "^0.25.0",
     "eslint": "^3.11.1",
     "eslint-plugin-react": "^6.7.1",
     "express": "^4.14.0",
-    "file-loader": "^0.9.0",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
     "font-awesome": "^4.7.0",
+    "html-webpack-plugin": "^2.26.0",
     "http-proxy": "^1.16.0",
     "json-loader": "^0.5.4",
     "next": "^1.2.3",
     "node-sass": "^3.10.1",
     "open-color": "^1.4.0",
+    "phantom": "^3.2.1",
     "postcss-loader": "^1.2.0",
     "react": "~15.3.1",
     "react-dom": "~15.3.1",
@@ -40,5 +48,9 @@
     "style-loader": "^0.13.1",
     "webpack": "v2.1.0-beta.27",
     "webpack-dev-server": "2.1.0-beta.12"
+  },
+  "dependencies": {
+    "file-loader": "^0.9.0",
+    "url-loader": "^0.5.7"
   }
 }

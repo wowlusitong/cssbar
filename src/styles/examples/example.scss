@@ -2,8 +2,11 @@
   &.wrap > div{
     flex-flow: wrap;
   }
-  &.nowrap > div {
-    flex-flow: nowrap;
+  &.nowrap {
+    overflow: auto;
+    & > div {
+      flex-flow: nowrap;
+    }
   }
   &.wrap-reverse > div {
     flex-flow: wrap-reverse;
@@ -17,69 +20,6 @@
       padding: 5px 0px;
       margin: 5px;
     }
-  }
-}
-
-#align-content .preview {
-  & > div {
-    display: flex;
-    flex-wrap: wrap;
-    height: 150px;
-    position: relative;
-
-    & > span {
-      min-width: 30%;
-      text-align: center;
-      padding: 5px 0px;
-      margin: 5px;
-      height: 30px;
-      box-sizing: border-box;
-    }
-  }
-  &.flex-start > div {
-    align-content: flex-start;
-
-  }
-  &.flex-end > div {
-    align-content: flex-end;
-  }
-  &.center > div {
-    align-content: center;
-  }
-  &.space-between > div {
-    align-content: space-between;
-  }
-  &.space-around > div {
-    align-content: space-around;
-  }
-}
-
-#align-items .preview {
-  & > div {
-    display: flex;
-    height: 100%;
-
-    span {
-      flex: 1;
-      text-align: center;
-      font-size: 13px;
-
-      &:nth-child(2) {
-        padding-top: 15px;
-      }
-    }
-  }
-  &.flex-start > div {
-    align-items: flex-start;
-  }
-  &.flex-end > div {
-    align-items: flex-end;
-  }
-  &.center > div {
-    align-items: center;
-  }
-  &.baseline > div {
-    align-items: baseline;
   }
 }
 
