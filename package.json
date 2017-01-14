@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint src",
+    "test": "npm run eslint ",
     "start": "node dev-server",
     "dev:server": "node server/server",
     "build:dev-server": "webpack -p --config webpack.server.config.js",
