@@ -16,5 +16,6 @@ dependencies:
     - ~/.cache/yarn
   override:
     - yarn install
-  test:
-    - yarn test  
+    
+test:
+  - yarn test
