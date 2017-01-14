@@ -1,3 +1,5 @@
+import {borderStyle, borderWidth} from './b.js';
+
 export default {
   'opacity': {
     description: '指定元素的透明度',
@@ -25,19 +27,81 @@ export default {
     ]
   },
   'order': {
-
+    description: '定义flexbox弹性容器内项目的布局顺序，元素会根据order的值进行排序，数字大的在后面',
+    values: [
+      {
+        name: '0',
+        id: 'default',
+        description: 'flexbox弹性容器里面的项目顺序由html代码决定'
+      },
+      {
+        name: '1',
+        id: 'a',
+      },
+      {
+        name: '-1',
+        id: 'b',
+        description: 'order可以设置为负数'
+      },
+      {
+        name: '5',
+        id: 'c'
+      }
+    ]
   },
   'outline-color': {
-
+    description: '定义元素的outline颜色，outline（轮廓）可以设置元素周围的一条线，在边框的外面',
+    values: [
+      {
+        name: 'invert/currentColor',
+        description: '如果浏览器不支持invert则会使用currentColor（当前颜色），invert只有ie8以上浏览器支持'
+      },
+      {
+        name: 'red',
+        description: '一个颜色值，包括颜色名称、十六进制、rgb、rgba、hsl、hsla'
+      },
+      {
+        name: 'red',
+        id: 'a',
+        description: '设置了一个2px的黑色边框，可以更加直观的看到outline的作用范围'
+      }
+    ]
   },
   'outline-style': {
-
+    description: '定义元素的outline样式，outline（轮廓）可以设置元素周围的一条线，在边框的外面',
+    values: borderStyle
   },
   'outline-width': {
-
+    description: '定义元素的outline宽度，outline（轮廓）可以设置元素周围的一条线，在边框的外面',
+    values: borderWidth.concat([
+      {
+        name: '1px 5px',
+        id: 'px-1-5',
+        description: '如果有两个值得话，第一个是上下边框，第二是左右边框'
+      },
+      {
+        name: '1px 5px 10px',
+        id: 'px-1-5-10',
+        description: '如果有三个值得话，第一个是上边框，第二个是下边框，第三个是左右边框'
+      },
+      {
+        name: '1px 5px 10px 15px',
+        id: 'px-1-5-10-15',
+        description: '如果有四个值得话，分别为上、右、下、左'
+      }
+    ])
   },
   'outline': {
-
+    description: '设置元素的轮廓，是outline-style, outline-width 和 outline-color的缩写',
+    values: [
+      {
+        name: 'medium none invert/currentColor',
+        id: 'default'
+      },{
+        name: '5px solid red',
+        id: 'a'
+      }
+    ]
   },
   // 'overflow-wrap': {
   //

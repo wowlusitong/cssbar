@@ -22,6 +22,7 @@
   & > div {
     width: 260px;
     height: 80px;
+    background: $oc-blue-3;
 
     & > div {
       width: 300px;
@@ -39,11 +40,14 @@
   }
 }
 #overflow-x .preview {
+  overflow: auto;
+  
   & > div {
     width: 260px;
     height: 80px;
     word-break: keep-all;
     white-space: nowrap;
+    background: $oc-blue-3;
 
     & > div {
       width: 300px;
@@ -62,8 +66,10 @@
 }
 #overflow-y .preview {
   & > div {
-    width: 200px;
+    width: 300px;
     height: 50px;
+    background: $oc-blue-3;
+
     & > div {
       width: 180px;
       overflow-x: hidden;
@@ -77,5 +83,183 @@
   }
   &.auto > div {
     overflow-y: auto;
+  }
+}
+#order .preview {
+  & > div {
+    display: flex;
+
+    & > span {
+      flex: 1;
+      height: 50px;
+    }
+  }
+  &.default > div {
+    @for $i from 1 through 4 {
+      & > span:nth-child(#{$i}) {
+        order: 0;
+        &::after {
+          content: 'order: 0';
+        }
+      }
+    }
+  }
+  &.a > div {
+    & > span:nth-child(1) {
+      order: 1;
+      &::after {
+        content: 'order: 1';
+      }
+    }
+    @for $i from 2 through 4 {
+      & > span:nth-child(#{$i}) {
+        order: 0;
+        &::after {
+          content: 'order: 0';
+        }
+      }
+    }
+  }
+  &.b > div {
+    @for $i from 1 through 3 {
+      & > span:nth-child(#{$i}) {
+        order: 0;
+        &::after {
+          content: 'order: 0';
+        }
+      }
+    }
+    & > span:nth-child(4) {
+      order: -1;
+      &::after {
+        content: 'order: -1';
+      }
+    }
+  }
+  &.c > div {
+    & > span:nth-child(1) {
+      order: 13;
+      &::after {
+        content: 'order: 13';
+      }
+    }
+    & > span:nth-child(2) {
+      order: -2;
+      &::after {
+        content: 'order: -2';
+      }
+    }
+    & > span:nth-child(3) {
+      order: 9;
+      &::after {
+        content: 'order: 9';
+      }
+    }
+    & > span:nth-child(4) {
+      order: 5;
+      &::after {
+        content: 'order: 5';
+      }
+    }
+  }
+}
+#outline-color .preview {
+  & > div {
+    padding: 10px;
+    margin: 20px;
+    outline-width: 5px;
+    outline-style: solid;
+  }
+  &.red > div {
+    outline-color: red;
+  }
+  &.a > div {
+    border: 2px solid #000;
+    outline-color: red;
+  }
+}
+#outline-style .preview {
+  & > div {
+    padding: 10px;
+    margin: 20px;
+    outline-width: 5px;
+  }
+  &.none > div {
+    outline-style: none;
+  }
+  &.solid > div {
+    outline-style: solid;
+  }
+  &.dotted > div {
+    outline-style: dotted;
+  }
+  &.dashed > div {
+    outline-style: dashed;
+  }
+  &.double > div {
+    outline-style: double;
+  }
+  &.groove > div {
+    outline-style: groove;
+  }
+  &.ridge > div {
+    outline-style: ridge;
+  }
+  &.inset > div {
+    outline-style: inset;
+  }
+  &.outset > div {
+    outline-style: outset;
+  }
+  &.hidden > div {
+    outline-style: hidden;
+  }
+  &.solid-dotted > div {
+    outline-style: solid dotted;
+  }
+  &.solid-dotted-double > div {
+    outline-style: solid dotted double;
+  }
+  &.solid-dotted-double-inset > div {
+    outline-style: solid dotted double inset;
+  }
+}
+
+#outline-width .preview {
+  & > div {
+    padding: 10px;
+    margin: 20px;
+    outline-style: solid;
+  }
+  &.px-1 > div {
+    outline-width: 1px;
+  }
+  &.px-10 > div {
+    outline-width: 10px;
+  }
+  &.thin > div {
+    outline-width: thin;
+  }
+  &.thick > div {
+    outline-width: thick;
+  }
+  &.px-1-5 > div {
+    outline-width: 1px 5px;
+  },
+  &.px-1-5-10 > div {
+    outline-width: 1px 5px 10px;
+  },
+  &.px-1-5-10-15 > div {
+    outline-width: 1px 5px 10px 15px;
+  }
+}
+
+#outline .preview {
+  & > div {
+    padding: 10px;
+    margin: 20px;
+  }
+  &.a > div {
+    outline: 5px solid red;
   }
 }

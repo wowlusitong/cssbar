@@ -1,4 +1,6 @@
 #word-break .preview {
+  overflow: auto;
+  
   .text {
     width: 300px;
   }
@@ -20,6 +22,8 @@
 }
 
 #white-space .preview {
+  overflow: auto;
+
   & > div {
     width: 300px;
     background: $oc-blue-2;

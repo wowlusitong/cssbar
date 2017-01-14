@@ -8,7 +8,7 @@ const borderColor =  [
     description: '一个颜色值，包括颜色名称、十六进制、rgb、rgba、hsl、hsla'
   }
 ];
-const borderWidth = [
+export const borderWidth = [
   {
     name: 'medium',
     description: '定义中等边框，在chrome/firefox等于3px'
@@ -32,7 +32,7 @@ const borderWidth = [
     description: '10px边框，使用[length]指定具体的宽度。'
   }
 ];
-const borderStyle = [
+export const borderStyle = [
   {
     name: 'none',
     description: '不显示边框'

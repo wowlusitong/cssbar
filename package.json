@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dev-server",
     "dev:server": "node server/server",
+    "build:dev-server": "webpack -p --config webpack.server.config.js",
     "build": "NODE_ENV=producet webpack -p",
-    "build:server": "isServer=true webpack -p --config webpack.server.config.js && cp -f server/* dist/server",
+    "build:server": "NODE_ENV=producet webpack -p --config webpack.server.config.js",
     "build:all": "npm run build && npm run build:server"
   },
   "keywords": [],
@@ -32,6 +33,7 @@
     "eslint-plugin-react": "^6.7.1",
     "express": "^4.14.0",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "file-loader": "^0.9.0",
     "font-awesome": "^4.7.0",
     "html-webpack-plugin": "^2.26.0",
     "http-proxy": "^1.16.0",
@@ -42,15 +44,13 @@
     "phantom": "^3.2.1",
     "postcss-loader": "^1.2.0",
     "react": "~15.3.1",
+    "react-document-title": "^2.0.2",
     "react-dom": "~15.3.1",
+    "react-helmet": "^3.3.0",
     "react-router": "^3.0.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "v2.1.0-beta.27",
     "webpack-dev-server": "2.1.0-beta.12"
-  },
-  "dependencies": {
-    "file-loader": "^0.9.0",
-    "url-loader": "^0.5.7"
   }
 }

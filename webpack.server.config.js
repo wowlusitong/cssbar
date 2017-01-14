@@ -1,13 +1,17 @@
 /* eslint-disable */
 
+//&& cp -f server/* dist/server
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './src/scripts/routes.js',
+  entry: {
+    index: './server/index.js'
+  },
   target: 'node',
   output: {
     path: `${__dirname}/dist/server`,
-    filename: 'routes.js',
+    filename: '[name].js',
     libraryTarget: 'commonjs'
   },
   module: {
