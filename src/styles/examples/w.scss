@@ -1,6 +1,6 @@
 #word-break .preview {
   overflow: auto;
-  
+
   .text {
     width: 300px;
   }
@@ -16,7 +16,7 @@
 }
 
 #word-spacing .preview {
-  .px {
+  &.a > div {
     word-spacing: 10px;
   }
 }

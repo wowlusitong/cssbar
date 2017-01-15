@@ -60,7 +60,7 @@ export default {
     ]
   },
   'word-spacing': {
-    description: '定义<strong>词</strong>的间距。',
+    description: '定义<strong>词</strong>的间距。可以简单的理解为word是以空格来区分，比如\'你好\'是一个词，\'你 好\'则是两个词',
     values: [
       {
         name: 'normal',
@@ -68,7 +68,8 @@ export default {
       },
       {
         name: '10px',
-        description: '通过指定具体的<length>来增加字体的单词间距。'
+        description: '通过指定具体的&lt;length&gt;来增加文本内容的单词间距。',
+        id: 'a'
       }
     ]
   }

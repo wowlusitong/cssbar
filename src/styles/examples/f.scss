@@ -1,0 +1,68 @@
+#font-size .preview {
+  &.a > div {
+    font-size: 20px;
+  }
+  &.b > div {
+    font-size: 3em;
+  }
+}
+
+#font-family .preview {
+  &.default > div {
+    font-family: "";
+  }
+  &.a > div {
+    font-family: "Microsoft YaHei",STKaiti;
+  }
+  &.b > div {
+    font-family: consolas,monospace;
+  }
+}
+
+#flex-direction .preview {
+  & > div{
+    display: flex;
+
+    & > span {
+      flex: 1;
+      height: 40px;
+      max-width: 90px;
+    }
+  }
+  &.row-reverse > div{
+    flex-direction: row-reverse;
+  }
+  &.column > div{
+    flex-direction: column;
+  }
+  &.column-reverse > div{
+    flex-direction: column-reverse;
+  }
+}
+
+#flex-flow .preview {
+  overflow: auto;
+
+  & > div{
+    display: flex;
+
+    & > span {
+      flex: 1;
+      min-height: 40px;
+      max-height: 40px;
+      max-width: 90px;
+      min-width: 90px;
+    }
+  }
+  &.a > div{
+    flex-flow: row-reverse wrap;
+  }
+  &.b > div{
+    height: 170px;
+    flex-flow: column nowrap;
+  }
+  &.c > div{
+    flex-flow: column wrap;
+    height: 170px;
+  }
+}

@@ -29,7 +29,17 @@ export default {
     ]
   },
   'letter-spacing': {
-
+    description: '定义字母的间距。对于中文来说每个字就是一个字母',
+    values: [
+      {
+        name: 'normal',
+        description: '正常的间距，由当前字体或浏览器定义。'
+      }, {
+        name: '10px',
+        description: '通过指定具体的&lt;length&gt;来增加文本内容的字母间距。',
+        id: 'a'
+      }
+    ]
   },
   'line-height': {
     description: '设置文本的行高',
