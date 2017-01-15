@@ -1,5 +1,5 @@
 import React from 'react';
-import {withRouter} from 'react-router';
+import {withRouter, Link} from 'react-router';
 
 import data from '~/data/properties';
 
@@ -12,17 +12,6 @@ class PropertyNav extends React.Component {
     };
   }
 
-  handleClick(name: string, event) {
-    event.preventDefault();
-    const isDetailPage = this.props.params.name;
-    if (isDetailPage) {
-      //FIXME use react-router
-      location.href = `/#${name}`;
-    } else {
-      location.hash = name;
-    }
-  }
-
   componentWillReceiveProps({value}) {
     if (value !== this.props.value) {
       this.setState({
@@ -31,16 +20,16 @@ class PropertyNav extends React.Component {
     }
   }
 
-
   render() {
-    const {value} = this.props;
+    const {value, params:{name}} = this.props;
     const {names} = this.state;
 
     return (
       <ul className="property-nav-wrap">
         {names.map(property =>
           <li key={property}>
-            <a onClick={this.handleClick.bind(this, property)}
+            <Link
+              to={`/?name=${name || property}`}
               dangerouslySetInnerHTML={{__html:
                 property.replace(RegExp(`(${value})`), '<span class="highlight">$1</span>')
               }}/>

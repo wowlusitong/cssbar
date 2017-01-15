@@ -1,11 +1,12 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import {withRouter} from 'react-router';
 
 import Property from '~/components/Property';
 import data from '~/data/properties';
 import Footer from '~/components/Footer';
 
-export default class AllProperties extends React.Component {
+class AllProperties extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -13,10 +14,20 @@ export default class AllProperties extends React.Component {
     };
   }
 
+  scrollTo(name) {
+    const top = document.querySelector(name).offsetTop;
+    document.querySelector('main').scrollTop = top - 2;
+  }
+
+  componentWillReceiveProps({location: {query: {name}}}) {
+    if (name !== this.props.location.query.name) {
+      this.scrollTo(`#${name}`);
+    }
+  }
+
   componentDidMount() {
     setTimeout(() => {
-      const top = document.querySelector(window.location.hash || 'main').offsetTop;
-      document.querySelector('main').scrollTop = top - 2;
+      this.scrollTo(`#${this.props.location.query.name}` || 'main');
     }, 0);
   }
 
@@ -38,3 +49,5 @@ export default class AllProperties extends React.Component {
     );
   }
 }
+
+export default withRouter(AllProperties)
