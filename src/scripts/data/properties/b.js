@@ -83,13 +83,78 @@ export default {
 
   },
   'background-color': {
+    description: '设置元素的背景颜色',
+    values: [
+      {
+        name: 'transparent',
+        description: '默认背景颜色是透明的，也可以说是没有背景颜色'
+      },
+      {
+        name: 'red',
+        description: '使用颜色名称设置背景颜色'
+      },
+      {
+        name: '#38d9a9',
+        description: '使用十六进制设置背景颜色',
+        id: 'a'
+      },
+      {
+        name: 'rgb(255, 212, 59)',
+        description: '使用rgb()设置背景颜色',
+        id: 'b'
+      },
+      {
+        name: 'rgb(255, 212, 59, 0.5)',
+        description: '使用rgba()设置背景颜色',
+        id: 'c'
+      },
+      {
+        name: 'hsl(255, 93%, 72%)',
+        description: '使用hsl()设置背景颜色',
+        id: 'd'
+      },
+      {
+        name: 'hsla(255, 93%, 72%, 0.7)',
+        description: '使用hsla()设置背景颜色',
+        id: 'e'
+      }
+    ]
 
   },
   'background-image': {
-
+    description: '使用图片设置元素的背景',
+    values: [
+      {
+        name: 'none',
+        description: '元素没有背景图片'
+      },
+      {
+        name: 'url(\'/images/bg.jpg\')',
+        id: 'a'
+      },
+      {
+        name: 'linear-gradient(red, blue)',
+        id: 'b',
+        description: '背景图片可以使用渐变色，包括线性渐变和经向渐变'
+      }
+    ]
   },
   'background-origin': {
-
+    description: '定义背景图片的起始位置',
+    values: [
+      {
+        name: 'padding-box',
+        description: '背景图片的起始位置在padding下，因为是在边框外，所以边框里面不会有背景'
+      },
+      {
+        name: 'border-box',
+        description: '背景图片的起始位置在边框下，可以理解为背景图片和边框是重合的（边框在背景上面'
+      },
+      {
+        name: 'content-box',
+        description: '背景图片的起始位置在内容下'
+      }
+    ]
   },
   'background-position': {
 

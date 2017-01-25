@@ -26,7 +26,8 @@ class AllProperties extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
+    const name = this.props.location.query.name;
+    name && setTimeout(() => {
       this.scrollTo(`#${this.props.location.query.name}` || 'main');
     }, 0);
   }

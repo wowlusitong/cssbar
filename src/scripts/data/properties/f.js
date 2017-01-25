@@ -1,6 +1,35 @@
 export default {
+  'flex': {
+    description: 'flex是flex-grow,flex-shrink和flex-basis的缩写',
+    values: [
+      {
+        name: '0 1 auto'
+      },
+      {
+        name: '1',
+        id: 'a'
+      }
+    ]
+  },
   'flex-basis': {
+    description: '定义flexbox弹性容器内元素的初始大小',
+    values: [
+      {
+        name: 'auto',
+        description: '元素将会根据内容自动分配大小'
+      },
+      {
+        name: '150px',
+        description: '定义固定的尺寸，可以使用px, em, 或者rem',
+        id: 'a'
+      },
+      {
+        name: '30px',
+        description: '定义固定的尺寸，可以使用px, em, 或者rem',
+        id: 'b'
+      }
 
+    ]
   },
   'flex-direction': {
     description: '定义flexbox弹性容器内部元素的排列方向',
@@ -24,7 +53,7 @@ export default {
     ]
   },
   'flex-flow': {
-    description: 'flex-flow是flex-direction和的缩写',
+    description: 'flex-flow是flex-direction和flex-wrap的缩写',
     values: [
       {
         name: 'row nowrap',
@@ -48,10 +77,39 @@ export default {
     ]
   },
   'flex-grow': {
-
+    description: '定义flexbox弹性容器内部元素的放大比例,也可以理解为该元素能分配到剩余空间的比例',
+    values: [
+      {
+        name: '0',
+        id: 'default',
+        description: '元素不会分配剩余的空间，它只会使用它自己需要的空间'
+      },
+      {
+        name: '1',
+        id: 'a',
+        description: '当前例子中，只有一个元素设置了flex-grow，其他的元素没有设置flex-grow，那么设置了该属性的元素则会分配剩余的所有空间'
+      },
+      {
+        name: '2',
+        id: 'b',
+        description: '因为flex-grow属性是相对的，它的放大比例会依赖其他兄弟元素设置的值'
+      }
+    ]
   },
   'flex-shrink': {
-
+    description: '定义flexbox弹性容器内部元素的收缩比例',
+    values: [
+      {
+        name: '1',
+        id: 'default',
+        description: '如果容器内没有足够的空间，设置了该值的元素将会缩小'
+      },
+      {
+        name: '0',
+        id: 'a',
+        description: '设置了该值得元素将不会收缩'
+      }
+    ]
   },
   'flex-wrap': {
     description: '指定flex元素单行显示还是多行显示',
