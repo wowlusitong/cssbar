@@ -430,6 +430,7 @@
     padding: 20px;
     border: 5px solid rgba(0,0,0, 0.5);
     background-repeat: no-repeat;
+    height: calc(100% - 50px);
   }
   &.padding-box > div {
     background-origin: padding-box;
@@ -439,5 +440,67 @@
   }
   &.content-box > div {
     background-origin: content-box;
+  }
+}
+
+#background-position .preview {
+  div {
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  &.default > div {
+    background-position: 0% 0%;
+  }
+  &.a > div {
+    background-position: 20px 20px;
+  }
+  &.b > div {
+    background-position: center bottom;
+  }
+}
+
+#background-repeat .preview {
+  div {
+    background-image: url('../images/bg.jpg');
+    height: 150px;
+  }
+  &.repeat > div {
+    background-repeat: repeat;
+  }
+  &.no-repeat > div {
+    background-repeat: no-repeat;
+  }
+  &.repeat-x > div {
+    background-repeat: repeat-x;
+  }
+  &.repeat-y > div {
+    background-repeat: repeat-y;
+  }
+  &.space > div {
+    background-repeat: space;
+  }
+  &.round > div {
+    background-repeat: round;
+  }
+}
+
+#background-size .preview {
+  div {
+    background-image: url('../images/bg.jpg');
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+  &.a > div {
+    background-size: 150px 80px;
+  }
+  &.b > div {
+    background-size: 100% 50%;
+  }
+  &.contain > div {
+    background-size: contain;
+  }
+  &.cover > div {
+    background-size: cover;
   }
 }

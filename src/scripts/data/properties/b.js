@@ -157,13 +157,80 @@ export default {
     ]
   },
   'background-position': {
-
+    description: '定义背景图片的位置',
+    values: [
+      {
+        name: '0% 0%',
+        id: 'default',
+        description: '使用百分比作为值，第一个值是横坐标，第二个值是纵坐标'
+      },
+      {
+        name: '20px 20px',
+        id: 'a',
+        description: '使用像素作为值，第一个值是横坐标，第二个值是纵坐标'
+      },
+      {
+        name: 'center bootom',
+        id: 'b',
+        description: '使用position关键字作为值，如：center, top, bottom, left 和 right'
+      },
+    ]
   },
   'background-repeat': {
-
+    description: '定义背景是否重复平铺显示，以及重复的方式',
+    values: [
+      {
+        name: 'repeat',
+        description: '背景会重复显示，如果最后一个大小不合适的话会裁剪'
+      },
+      {
+        name: 'no-repeat',
+        description: '背景不会重复显示，只会显示一个'
+      },
+      {
+        name: 'repeat-x',
+        description: '背景会横向重复显示'
+      },
+      {
+        name: 'repeat-y',
+        description: '背景会纵向重复显示'
+      },
+      {
+        name: 'space',
+        description: '背景会重复显示，但是不会裁剪，如果剩余空间不够显示完整图像的话就不会显示了'
+      },
+      {
+        name: 'round',
+        description: '背景会重复显示，但是不会裁剪，如果剩余空间不够显示完整图像则会改变图像的大小进行填充'
+      }
+    ]
   },
   'background-size': {
-
+    description: '定义背景图片的尺寸',
+    values: [
+      {
+        name: 'auto auto',
+        description: '背景图像将以原始尺寸显示'
+      },
+      {
+        name: '150px 80px',
+        id: 'a',
+        description: '使用像素作为值，第一值是宽度，第二个值是高度'
+      },
+      {
+        name: '100% 50%',
+        id: 'b',
+        description: '使用百分比作为值，第一值是宽度，第二个值是高度'
+      },
+      {
+        name: 'contain',
+        description: '图像将会等比例缩放以填充背景区域，因为背景图像会等比缩放完整显示，所以如果背景区域与图片比例不一致的话，会有空白区域'
+      },
+      {
+        name : 'cover',
+        description: '将背景图像缩放以便完全填充覆盖背景区域，有可能会有部分图片会被裁剪'
+      }
+    ]
   },
   'background': {
 
