@@ -504,3 +504,21 @@
     background-size: cover;
   }
 }
+
+#background-attachment .preview {
+  overflow: auto;
+  height: 200px;
+
+  & > div {
+    background-image: url('../images/bg_large.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    p {
+      margin: 0px;
+    }
+  }
+  &.fixed > div {
+    background-attachment: fixed;
+  }
+}

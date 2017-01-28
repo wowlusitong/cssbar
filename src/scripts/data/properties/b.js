@@ -77,7 +77,17 @@ export const borderStyle = [
 
 export default {
   'background-attachment': {
-
+    description: '当滚动窗口的时候，定义背景图像的表现方式，比如是否跟随滚动',
+    values: [
+      {
+        name: 'scroll',
+        description: '背景图像将随页面滚动'
+      },
+      {
+        name: 'fixed',
+        description: '背景图像不会随页面滚动，将会现对于视图固定'
+      }
+    ]
   },
   'background-clip': {
 
