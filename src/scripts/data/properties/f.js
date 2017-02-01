@@ -164,15 +164,81 @@ export default {
     ]
   },
   'font-style': {
-
+    description: '定义文字的斜体风格',
+    values: [
+      {
+        name: 'normal',
+        description: '常规字体，非斜体'
+      },
+      {
+        name: 'italic',
+        description: '使用斜体，当前字体如果没有可以使用的斜体版本，则会选用倾斜体（oblique ）替代。'
+      },
+      {
+        name: 'oblique',
+        description: '使用倾斜体，当前字体如果没有可以使用的倾斜体版本，则会使用斜体（ italic ）替代'
+      }
+    ]
   },
   'font-variant': {
-
+    description: '定义文本是否为小型的大写字母',
+    values: [
+      {
+        name: 'normal',
+        description: '正常显示'
+      },
+      {
+        name: 'small-caps',
+        description: '字母显示为小型的大写字母'
+      }
+    ]
   },
   'font-weight': {
-
+    description: '定义文本内容字体的粗细程度，注：一些字体只提供normal 和 bold 两个值',
+    values: [
+      {
+        name: 'normal',
+        description: '正常的粗细，和400相等'
+      },
+      {
+        name: 'bold',
+        description: '加粗，和700相等'
+      },
+      {
+        name: '500',
+        id: 'a',
+        description: `可以使用数值作为值，下面列出可以用的数字值都和他们对应的名称
+<ul>
+  <li><strong>100</strong> Thin</li>
+  <li><strong>200</strong> Extra Light</li>
+  <li><strong>300</strong> Light</li>
+  <li><strong>400</strong> Normal</li>
+  <li><strong>500</strong> Medium</li>
+  <li><strong>600</strong> Semi Bold</li>
+  <li><strong>700</strong> Bold</li>
+  <li><strong>800</strong> Extra Bold</li>
+  <li><strong>900</strong> Ultra Bold</li>
+</ul>
+        `
+      },
+      {
+        name: 'lighter',
+        description: '比从父元素继承下来的font-weight值更细'
+      }
+    ]
   },
   'font': {
-
+    description: 'font属性是font-style, font-variant, font-weight, font-size, line-height 和 font-family属性的缩写',
+    values: [
+      {
+        name: 'normal normal normal normal medium normal [user agent]',
+        description: '属性都使用默认值'
+      },
+      {
+        name: '20px "Microsoft YaHei",STKaiti',
+        id: 'a',
+        description: '只设置font-size和font-family'
+      }
+    ]
   }
 };

@@ -181,3 +181,36 @@
     }
   }
 }
+
+#font-style .preview {
+  &.italic > div {
+    font-style: italic;
+  }
+  &.oblique > div {
+    font-style: oblique;
+  }
+}
+
+#font-variant .preview {
+  &.small-caps {
+    font-variant: small-caps;
+  }
+}
+
+#font-weight .preview {
+  &.bold > div {
+    font-weight: bold;
+  }
+  &.lighter > div {
+    font-weight: lighter;
+  }
+  &.a > div {
+    font-weight: 500;
+  }
+}
+
+#font .preview {
+  &.a > div {
+    font: 20px "Microsoft YaHei",STKaiti;
+  }
+}
