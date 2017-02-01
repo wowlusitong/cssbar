@@ -67,3 +67,57 @@
     letter-spacing: 10px;
   }
 }
+
+#list-style-type .preview {
+  &.disc > ul {
+    list-style-type: disc;
+  }
+  &.circle > ul {
+    list-style-type: circle;
+  }
+  &.square > ul {
+    list-style-type: square;
+  }
+  &.decimal > ul {
+    list-style-type: decimal;
+  }
+  &.none > ul {
+    list-style-type: none;
+  }
+  &.cjk-ideographic > ul {
+    list-style-type: cjk-ideographic;
+  }
+  &.upper-latin > ul {
+    list-style-type: upper-latin;
+  }
+  &.cjk-ideographic > ul {
+    list-style-type: cjk-ideographic;
+  }
+}
+
+#list-style-position .preview {
+  li {
+    background: $oc-yellow-4;
+  }
+  &.inside > ul {
+    list-style-position: inside;
+  }
+}
+
+#list-style-image .preview {
+  &.a > ul {
+    list-style-image: url('../images/favicon.png');
+  }
+}
+
+#list-style .preview {
+ &.default > ul {
+   list-style: disc none outside;
+ }
+ &.a > ul {
+   list-style: circle;
+ }
+ &.b > ul {
+   list-style: circle inside;
+ }
+}
