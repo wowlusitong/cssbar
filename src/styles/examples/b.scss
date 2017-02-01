@@ -428,7 +428,7 @@
   div {
     background-image: url('../images/bg.jpg');
     padding: 20px;
-    border: 5px solid rgba(0,0,0, 0.5);
+    border: 5px dotted rgba(0,0,0, 0.5);
     background-repeat: no-repeat;
     height: calc(100% - 50px);
   }
@@ -520,5 +520,25 @@
   }
   &.fixed > div {
     background-attachment: fixed;
+  }
+}
+
+#background-clip .preview {
+  div {
+    //background-image: url('../images/bg.jpg');
+    background: $oc-yellow-4;
+    padding: 20px;
+    border: 5px dotted rgba(0,0,0, 0.5);
+    background-repeat: no-repeat;
+    height: calc(100% - 50px);
+  }
+  &.padding-box > div {
+    background-clip: padding-box;
+  }
+  &.border-box > div {
+    background-clip: border-box;
+  }
+  &.content-box > div {
+    background-clip: content-box;
   }
 }

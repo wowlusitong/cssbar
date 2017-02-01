@@ -90,7 +90,21 @@ export default {
     ]
   },
   'background-clip': {
-
+    description: '定义元素背景的显示区域，如是否可以延伸到边框下面',
+    values: [
+      {
+        name: 'border-box',
+        description: '背景延伸到边框下'
+      },
+      {
+        name: 'padding-box',
+        description: '背景延伸到padding下，边框下面没有背景'
+      },
+      {
+        name: 'content-box',
+        description: '背景只在内容下，边框和padding下没有背景'
+      }
+    ]
   },
   'background-color': {
     description: '设置元素的背景颜色',
@@ -150,7 +164,7 @@ export default {
     ]
   },
   'background-origin': {
-    description: '定义背景图片的起始位置',
+    description: '定义背景图片的起始位置, background-position会以此为参照点',
     values: [
       {
         name: 'padding-box',
@@ -158,7 +172,7 @@ export default {
       },
       {
         name: 'border-box',
-        description: '背景图片的起始位置在边框下，可以理解为背景图片和边框是重合的（边框在背景上面'
+        description: '背景图片的起始位置在边框下，可以理解为背景图片和边框是重合的（边框在背景上面）'
       },
       {
         name: 'content-box',
