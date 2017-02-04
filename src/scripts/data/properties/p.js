@@ -108,6 +108,24 @@ export default {
   //
   // },
   'position': {
-
+    description: '设置元素的定位方式',
+    values: [
+      {
+        name: 'static',
+        description: '元素使用正常的布局行为，既元素在文档流中当前的布局位置，在此定位下top, right, bottom, left 和 z-index属性无效'
+      },
+      {
+        name: 'relative',
+        description: '相对定位，元素相对于当前文档流位置进行定位，不会脱离文档流'
+      },
+      {
+        name: 'absolute',
+        description: '绝对定位，元素相对于最近的非 static 定位祖先元素进行定位，会脱离文档流'
+      },
+      {
+        name: 'fixed',
+        description: '<button class="button enable">启用fixed效果</button><br /><br />元素相对于浏览器可视窗口进行定位，在屏幕滚动时元素的位置不会改变'
+      }
+    ]
   }
 };
