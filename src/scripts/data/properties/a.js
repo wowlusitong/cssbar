@@ -4,7 +4,7 @@ export default {
     values: [
       {
         name: 'stretch',
-        description: '拉伸所有行来填满空间。空间为平均分配给每一行'
+        description: '拉伸所有行来填满空间。剩余空间平均的分配给每一行'
       },
       {
         name: 'flex-start',

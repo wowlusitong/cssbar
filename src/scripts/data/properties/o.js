@@ -128,7 +128,7 @@ export default {
     ]
   },
   'overflow-y': {
-    description: '当一个块级元素的内容在垂直方向发生溢出时，CSS属性overflow-x决定应该截断溢出内容，显示滚动条，或者直接显示溢出内容。',
+    description: '当一个块级元素的内容在垂直方向发生溢出时，CSS属性overflow-y决定应该截断溢出内容，显示滚动条，或者直接显示溢出内容。',
     values: [
       {
         name: 'visible',
@@ -168,5 +168,8 @@ export default {
         description: '由浏览器定夺，如果内容被修剪，就会显示滚动条'
       }
     ]
+  },
+  'object-fit': {
+
   }
 };
