@@ -542,3 +542,21 @@
     background-clip: content-box;
   }
 }
+
+#box-sizing .preview {
+  div {
+    width: 200px;
+    padding: 20px;
+    border: 10px solid $oc-blue-5;
+    background: $oc-teal-4;
+
+    span {
+      width: 100%;
+      display: block;
+      background: $oc-yellow-4;
+    }
+  }
+  &.border-box > div {
+    box-sizing: border-box;
+  }
+}

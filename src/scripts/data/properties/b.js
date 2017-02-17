@@ -637,6 +637,32 @@ export default {
 
   },
   'box-sizing': {
-
+    description: '计算元素width（宽度）和height（高度）的的时候，是否包含padding和border',
+    values: [
+      {
+        name: 'content-box',
+        description: `width和height只计算元素的content部分，比如
+        <ul>
+          <li>border-width: 10px</li>
+          <li>padding: 20px</li>
+          <li>with: 200px</li>
+        </ul>
+        该元素完整的宽度则是(10px * 2) + (20px * 2) + 200px = 260px
+        `
+      },
+      {
+        name: 'border-box',
+        description: `width和height摆阔padding和border部分，不包括margin
+        <ul>
+          <li>border-width: 10px</li>
+          <li>padding: 20px</li>
+          <li>with: 200px</li>
+        </ul>
+        该元素完整的宽度则是200px，其中content的宽度为：<br />
+          200px - (10px * 2) + (20px * 2) = 140px <br />
+        如果content计算后的宽度为负值，那么则设置为0px    
+        `
+      }
+    ]
   }
 };
