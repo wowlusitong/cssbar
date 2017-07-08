@@ -1,3 +1,12 @@
+@keyframes move {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 200px;
+  }
+}
+
 #align-content .preview {
   & > div {
     display: flex;
@@ -96,5 +105,24 @@
   }
   &.baseline > div span:nth-child(2) {
     align-self: baseline;
+  }
+}
+
+#animation-delay .preview {
+  & > div {
+    background: $oc-yellow-5;
+    width: 80px;
+    height: 80px;
+    animation: 3s infinite;
+    position: relative;
+  }
+  &.a > div {
+    animation-delay: 0s;
+  }
+  &.b > div {
+    animation-delay: 1s;
+  }
+  &.c > div {
+    animation-delay: -1s;
   }
 }

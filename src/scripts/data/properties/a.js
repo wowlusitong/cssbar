@@ -85,7 +85,22 @@ export default {
     ]
   },
   'animation-delay': {
-
+    description: '1',
+    values: [
+      {
+        name: '0s',
+        description: '',
+        id: 'a'
+      },
+      {
+        name: '1s',
+        id: 'b'
+      },
+      {
+        name: '-1s',
+        id: 'c'
+      }
+    ]
   },
   'animation-direction': {
 

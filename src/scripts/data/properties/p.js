@@ -124,7 +124,7 @@ export default {
       },
       {
         name: 'fixed',
-        description: '<button class="button enable">启用fixed效果</button><br /><br />元素相对于浏览器可视窗口进行定位，在屏幕滚动时元素的位置不会改变'
+        description: '元素相对于浏览器可视窗口进行定位，在屏幕滚动时元素的位置不会改变'
       }
     ]
   }

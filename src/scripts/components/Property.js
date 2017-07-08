@@ -3,6 +3,7 @@
 import React from 'react';
 
 import allExamples from '~/components/examples';
+import descriptions from '~/components/descriptions';
 import {toCamelcase} from '~/utils/format';
 
 export default class Property extends React.PureComponent {
@@ -15,6 +16,7 @@ export default class Property extends React.PureComponent {
 
   render() {
     const {property, name} = this.props;
+    const Description = descriptions[toCamelcase(name)];
 
     return (
       <section className="property-wrap" id={name}>
@@ -23,13 +25,14 @@ export default class Property extends React.PureComponent {
             <a href={`/css/${name}`} target="_blank">{name}</a>
           </strong>
         </h2>
-        {!!property.values || 'Coming Soon'}
-        <p dangerouslySetInnerHTML={{__html: property.description}} />
+        {property.values == null && 'Coming Soon'}
+        {Description ? <Description /> : <p dangerouslySetInnerHTML={{__html: property.description}} />}
         {(property.values || []).map((value, i) => {
           const propertyExample = allExamples[toCamelcase(name)];
           const Example = typeof propertyExample === 'function'
             ? propertyExample
             : propertyExample && propertyExample[toCamelcase(value.name)];
+
           return <section className="example" key={i}>
             <div className="description">
               <p>

@@ -153,24 +153,6 @@
   &.fixed > div {
     .target {
       //position: fixed;
-      .button {
-        min-width: 130px;
-        height: 30px;
-        margin-left: 10px;
-        border-radius: 3px;
-        background: $oc-blue-5;
-        color: #fff;
-        border: none;
-        outline: none;
-        cursor: pointer;
-
-        &:hover {
-          background: $oc-blue-6;
-        }
-        &:active {
-          background: $oc-blue-7;
-        }
-      }
     }
   }
 }

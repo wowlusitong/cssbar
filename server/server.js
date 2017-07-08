@@ -35,7 +35,6 @@ app.get('/*', (req, res) => {
           <head>
             <meta charset="utf-8" />
             ${renderHeadToString(head)}
-            <link rel="stylesheet" href="http://www.cssbar.com/styles.css" />
           </head>
           <body>
             ${body}
