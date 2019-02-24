@@ -36,10 +36,9 @@ class AllProperties extends React.Component {
     return (
       <div>
         <Helmet
-          title="CSS可视化教程 - 致力于打造国内一流的WEB前端开发教程"
+          title="CSS可视化教程"
           meta={[
-            {name: 'keywords', content: 'cssbar, css3教程, 前端开发'},
-            {name: 'description', content: 'cssbar是一个可视化css教程，每个css属性都有直观的展示，使web前端开发人员更加方便的查询，也让前端初学者，前端培训人员快速掌握css知识'}
+            {name: 'keywords', content: 'css'}
           ]}
           />
         {this.state.propertyNames.map(name =>

@@ -44,9 +44,6 @@ export default class Sidebar extends React.Component {
     return (
       <nav className="sidebar-wrap">
         <header>
-          <div className="logo-wrap">
-            <a href="/"><img src={Logo} width="200px" title="cssbar.com" /></a>
-          </div>
           <div className="search-wrap">
             <i className={`fa fa-search ${classNames({active: isActive})}`} />
             <input type="text" placeholder="请输入关键字" value={value}

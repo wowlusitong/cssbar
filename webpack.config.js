@@ -31,7 +31,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
-      title: 'asd'
+      template: 'src/index.html'
     })
   ]
 };

@@ -8,8 +8,8 @@
     "start": "node dev-server",
     "dev:server": "node server/server",
     "build:dev-server": "webpack -p --config webpack.server.config.js",
-    "build": "NODE_ENV=producet webpack -p",
-    "build:server": "NODE_ENV=producet webpack -p --config webpack.server.config.js",
+    "build": "rm -rf ./dist/assets/* && NODE_ENV=producet webpack -p",
+    "build:server": "rm -rf ./dist/server/* && cp -f server/* dist/server && NODE_ENV=producet webpack -p --config webpack.server.config.js",
     "build:all": "npm run build && npm run build:server"
   },
   "keywords": [],

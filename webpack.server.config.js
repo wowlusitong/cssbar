@@ -1,7 +1,5 @@
 /* eslint-disable */
 
-//&& cp -f server/* dist/server
-
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {

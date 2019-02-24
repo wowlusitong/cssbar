@@ -3,6 +3,6 @@ import React from 'react';
 export default () => (
   <div>
     Hello World
-    <div>asdasdasd</div>
+    <div>hello world</div>
   </div>
 );
