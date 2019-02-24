@@ -1,37 +1,46 @@
 /* eslint-disable */
+const path = require('path');
 
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const isProducet = process.env.NODE_ENV;
 
+const basePath = path.resolve(__dirname, 'src')
 module.exports = {
   entry: {
-    main: ['babel-polyfill', './src/scripts/main.js', './src/styles/main.scss']
+    main: ['./src/scripts/main.js', './src/styles/main.scss']
   },
   output: {
     path: `${__dirname}/dist/assets`,
     filename: 'bundle.js',
-    publicPath: isProducet ? '/' : '/dist'
+    publicPath: '/'
   },
   module: {
-    loaders: [
-      {test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader'},
-      {test: /\.json$/, loader: 'json-loader'},
-      {test: /\.(eot|woff|woff2|ttf|svg|png|jpg)($|\?)/, loader: 'file-loader'},
+    rules: [
+      {test: /\.(js|jsx)$/, exclude: /node_modules/, use: ['babel-loader']},
+      {test: /\.json$/, use: ['json-loader']},
+      {test: /\.(eot|woff|woff2|ttf|svg|png|jpg)($|\?)/, use: ['file-loader']},
       {
         test: /\.scss$/,
-        loader: isProducet ? ExtractTextPlugin.extract({
-          fallbackLoader: 'style-loader',
-          loader: 'css-loader!postcss-loader!sass-loader'
-        }) : 'style-loader!css-loader!postcss-loader!sass-loader'
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       },
     ]
   },
   plugins: [
-    new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      '~': `${basePath}/scripts`,
+      '@images': `${basePath}/images`
+    }
+  },
+  devServer: {
+    quiet: true,
+    hot: true,
+    open: true,
+    historyApiFallback: true
+  }
 };

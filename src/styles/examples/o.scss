@@ -41,7 +41,7 @@
 }
 #overflow-x .preview {
   overflow: auto;
-  
+
   & > div {
     width: 260px;
     height: 80px;
@@ -245,10 +245,10 @@
   }
   &.px-1-5 > div {
     outline-width: 1px 5px;
-  },
+  }
   &.px-1-5-10 > div {
     outline-width: 1px 5px 10px;
-  },
+  }
   &.px-1-5-10-15 > div {
     outline-width: 1px 5px 10px 15px;
   }
